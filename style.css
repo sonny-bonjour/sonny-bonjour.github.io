@@ -1,0 +1,108 @@
+:root{
+  font-size: 16px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{ font-family: 'playfair', serif;}
+h2{font-size: 4rem}
+a:link{text-decoration: none;}
+.wrapper{
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+/* ---- HEADER ---- */
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #101010;
+  padding: 20px;
+}
+.conteneur-nav{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo{
+  width: 70px;
+}
+.header-nav--link {
+  margin: 0 20px;
+}
+.header-nav--link:hover {
+  color:orange;
+}
+
+/* ---- HERO ---- */
+main{
+  height: 100vh;
+  background: url('img/resto.jpg') bottom;
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+main p{
+  text-shadow: 2px 2px 2px #252525;
+  max-width: 450px;
+}
+.okay-intro{font-family: 'playfair'; font-size: 2rem;}
+
+/* ---- PHOTOS ---- */
+.section-deco{
+  display: flex;
+  flex-wrap: wrap;
+  height: 40vh;
+}
+.section-deco > img:nth-child(1){
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+.section-deco > img:nth-child(2){
+  height: 100%;
+  width: 20%;
+  object-fit: cover;
+}
+.section-deco > img:nth-child(3){
+  height: 100%;
+  width: 30%;
+  object-fit: cover;
+}
+
+/* ---- HORAIRES ---- */
+.section-horaires-fw{
+  padding: 100px 30px;
+  background: url('img/open.jpg') #010e16 no-repeat right;
+  background-size: cover;
+}
+.section-horaires h2{margin-bottom: 20px;}
+.table-horaires tr td:nth-child(2){
+  text-align: right;
+  padding-left: 20px;
+}
+
+.test{
+  max-width: 350px;
+}
+.table-horaires{
+  width: 100%;
+}
+
+/* ---- POINT DE RUPTURE 768 ---- */
+@media (max-width:768px) {
+  .section-deco > img:nth-child(1){width: 100%;}
+  .section-deco > img:nth-child(2){display: none;}
+  .section-deco > img:nth-child(3){display: none;}
+  .section-horaires-fw{background-image: url('img/motif.jpg');}
+}
